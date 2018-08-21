@@ -36,5 +36,6 @@ docker run --name=nginx \
  -p 80:80 -p 443:443 \
  --restart=always \
  -d shakataganai/nginx-accessfabric-certbot:latest
+```
 
 When the container first starts, if the key's are not detected it will turn the `.conf` off. Once certbot aquires a certificate, the `.conf` will be turned back on and nginx reloaded. If there are issues, run `docker log nginx`.  Accessing `gitlab.ext.company.tld` should result in a 401 Access Denied. Accessing `gitlab.company.tld` should result in functional Access Fabric login proccess and your end-service.
