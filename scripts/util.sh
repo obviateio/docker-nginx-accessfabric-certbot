@@ -59,7 +59,7 @@ auto_enable_configs() {
 # EMAIL environment variable, to register the proper support email address.
 get_certificate() {
     echo "Getting certificate for domain $1 on behalf of user $2"
-    certbot certonly --agree-tos --keep -n --text --email $2 --server \
-        https://acme-v02.api.letsencrypt.org/directory -d \*.$1 -d $1 --http-01-port 1337 \
-        --standalone --preferred-challenges http-01 --debug
+    certbot certonly --standalone --agree-tos --keep -n --text --email $2 --server \
+        https://acme-v02.api.letsencrypt.org/directory -d $1 --http-01-port 1337 \
+        --preferred-challenges http --debug
 }
