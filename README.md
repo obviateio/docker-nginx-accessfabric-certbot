@@ -5,7 +5,7 @@ Create and automatically renew website SSL certificates using the letsencrypt fr
 
 
 # Usage
-* Login to (ScaleFT)[https://app.scaleft.com/]
+* Login to [ScaleFT](https://app.scaleft.com/)
 * Create a project 
 * Go into that project & create an application
 * Verify your origin URL (ex: `gitlab.ext.company.tld`) is in DNS and externally resolveable
